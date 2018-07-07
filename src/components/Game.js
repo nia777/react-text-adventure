@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 
 import { Start, Desk, BossDesk, BreakRoom, End } from './locations';
+import Controls from './Controls';
 
 class Game extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
-      location: ''
+      currentLocation: '',
+      cake: false
     };
   }
 
-  displayRoom = room => {
-    switch(room) {
+  displayLocation = location => {
+    switch(location) {
       case 'Desk':
         return (<Desk />);
       case 'BossDesk':
@@ -26,11 +28,29 @@ class Game extends Component {
     }
   }
 
+  updateLocation = location => {
+    this.setState({ 
+      currentLocation: location 
+    });
+  };
+
+  grabCake = () => {
+    this.setState({
+      cake: true
+    });
+  };
+
   render() {
     return (
       <div>
         <h1>Escape From Corporate 'Murica</h1>
-        {this.displayRoom(this.state.location)}
+        {this.displayLocation(this.state.currentLocation)}
+        <Controls 
+          location={this.state.currentLocation} 
+          hasCake={this.state.cake}
+          updateLocation={this.updateLocation}
+          grabCake={this.grabCake}
+        />
       </div>
     );
   }
