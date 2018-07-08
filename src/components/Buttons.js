@@ -6,9 +6,11 @@ const Buttons = props => {
     { name: 'BossDesk', text: 'Go to boss\'s desk', type: 'location' },
     { name: 'BreakRoom', text: 'Go to the breakroom', type: 'location' },
     { name: 'cake', text: 'Snag Creed\'s cake', type: 'action' },
-    { name: 'tempt', text: 'Tempt with cake', type: 'action' }
+    { name: 'tempt', text: 'Tempt with cake', type: 'action' },
+    { name: 'restart', text: 'Play again', type: 'action' }
   ];
 
+  // TODO: could probably pull this out into a utility function
   return (
     <Fragment>
       {
@@ -23,7 +25,7 @@ const Buttons = props => {
     
             if(current.name === 'cake'){
               if(!props.hasCake && props.location === 'BreakRoom'){
-                acc.push({ ...current, action: props.grabCake });
+                acc.push({ ...current, action: props.toggleCake });
               }
             }
     
@@ -32,6 +34,10 @@ const Buttons = props => {
                 const action = () => props.updateLocation('End');
                 acc.push({ ...current, action });
               }
+            }
+
+            if(props.location === 'End' && current.name === 'restart'){
+              acc.push({ ...current, action: props.restart })
             }
 
             return acc;

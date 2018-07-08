@@ -28,24 +28,30 @@ class Game extends Component {
     }
   }
 
-  updateLocation = location => {
-    this.setState({ location });
+  restart = () => {
+    this.toggleCake();
+    this.updateLocation({ location: 'End' });
   };
 
-  grabCake = () => {
-    this.setState({ hasCake: true });
+  toggleCake = () => {
+    this.setState({ hasCake: !this.state.hasCake });
+  };
+
+  updateLocation = location => {
+    this.setState({ location });
   };
 
   render() {
     return (
       <div>
-        <h1>Escape From Corporate 'Murica</h1>
+        <h1>Escape From Corporate America</h1>
         {this.displayLocation(this.state.location)}
         <Buttons 
-          location={this.state.location} 
           hasCake={this.state.hasCake}
+          location={this.state.location} 
+          restart={this.restart}
+          toggleCake={this.toggleCake}
           updateLocation={this.updateLocation}
-          grabCake={this.grabCake}
         />
       </div>
     );

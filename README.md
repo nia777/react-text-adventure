@@ -18,6 +18,6 @@ This is a wip and a live link to play the game will be available here upon compl
 - ~~Basic setup of project~~
 - ~~Show/hide room info~~
 - ~~Show/hide buttons~~
-- Play again button once the game is won
-- Styling
-- Tests (alongside refactor and general cleanup)
+- ~~Play again button once the game is won~~
+- ~~Styling~~
+- Tests (alongside general cleanup/refactor)
