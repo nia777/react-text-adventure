@@ -7,7 +7,9 @@
 /coverage
 
 # production
-/build
+# needed for GitHub pages deployment
+# might uncomment later possibly
+# /build
 
 # misc
 .DS_Store
