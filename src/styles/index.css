@@ -1,0 +1,29 @@
+body {
+  font-family: monospace;
+  margin: auto 3%;
+  padding: 2%;
+  background-color: black;
+  color: lime;
+  font-size: large;
+}
+
+button {
+  background-color: lime;
+  border: lime 2px solid;
+  color: black;
+  padding: 1%;
+  margin: 2%;
+  font-family: monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+button:first-of-type {
+  margin-left: 0;
+}
+
+button:hover {
+  background-color: black;
+  color: lime;
+  cursor: pointer;
+}
