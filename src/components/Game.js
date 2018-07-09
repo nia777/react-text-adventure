@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import { Start, Desk, BossDesk, BreakRoom, End } from './locations';
-import Buttons from './Buttons';
 
 class Game extends Component {
   constructor(props) {
@@ -16,15 +15,42 @@ class Game extends Component {
   displayLocation = location => {
     switch(location) {
       case 'Desk':
-        return (<Desk />);
+        return (
+          <Desk 
+            location={this.state.location} 
+            updateLocation={this.updateLocation}
+          />
+        );
       case 'BossDesk':
-        return (<BossDesk />);
+        return (
+          <BossDesk 
+            hasCake={this.state.hasCake}
+            location={this.state.location} 
+            updateLocation={this.updateLocation} 
+          />
+        );
       case 'BreakRoom':
-        return (<BreakRoom />);
+        return (
+          <BreakRoom 
+            hasCake={this.state.hasCake}
+            location={this.state.location} 
+            toggleCake={this.toggleCake}
+            updateLocation={this.updateLocation} 
+          />
+        );
       case 'End':
-        return (<End />);
+        return (
+          <End 
+            restart={this.restart}
+          />
+        );
       default:
-        return (<Start />);
+        return (
+          <Start 
+            location={this.state.location} 
+            updateLocation={this.updateLocation} 
+          />
+        );
     }
   }
 
@@ -43,17 +69,10 @@ class Game extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <h1>Escape From Corporate America</h1>
         {this.displayLocation(this.state.location)}
-        <Buttons 
-          hasCake={this.state.hasCake}
-          location={this.state.location} 
-          restart={this.restart}
-          toggleCake={this.toggleCake}
-          updateLocation={this.updateLocation}
-        />
-      </div>
+      </Fragment>
     );
   }
 }

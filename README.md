@@ -20,5 +20,6 @@ An office inspired escape game. Can you sneak out of work early without your bos
 - ~~Show/hide buttons~~
 - ~~Play again button once the game is won~~
 - ~~Styling~~
-- Tests (alongside general cleanup/refactor)
+- Add PropTypes
+- More tests
 - New favicon
