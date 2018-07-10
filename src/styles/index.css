@@ -11,12 +11,14 @@ button {
   background-color: #33FF00;
   border: #33FF00 2px solid;
   color: black;
-  padding: 1%;
-  margin: 2%;
+  padding: 5px;
+  margin: 10px;
   font-family: monospace;
   font-size: 13px;
   text-transform: uppercase;
   border-radius: 2px;
+  display: inline-block;
+  height: 55px;
 }
 
 button:first-of-type {
