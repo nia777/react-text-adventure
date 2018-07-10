@@ -18,7 +18,7 @@ button {
   text-transform: uppercase;
   border-radius: 2px;
   display: inline-block;
-  height: 55px;
+  height: 60px;
 }
 
 button:first-of-type {
@@ -26,6 +26,10 @@ button:first-of-type {
 }
 
 @media (min-width: 1366px){
+  button {
+    height: 35px;
+  }
+
   button:hover {
     background-color: black;
     color: #33FF00;
