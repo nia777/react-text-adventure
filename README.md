@@ -14,12 +14,6 @@ An office inspired escape game. Can you sneak out of work early without your bos
 3. `yarn start` will run a dev version of the app on port 3000
 4. `yarn build` will create a prod ready version of the app and place these files into a `build` folder
 
-## TODO Items
-- ~~Basic setup of project~~
-- ~~Show/hide room info~~
-- ~~Show/hide buttons~~
-- ~~Play again button once the game is won~~
-- ~~Styling~~
-- Add PropTypes
-- More tests
-- New favicon
+## Tests
+1. `yarn test:ui` to run ui behavior tests via [cypress](https://www.cypress.io/)
+2. `yarn test:cli` to run a headless version of the ui behavior tests
