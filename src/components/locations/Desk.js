@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const Desk = props => (
   <Fragment>
@@ -16,5 +17,9 @@ const Desk = props => (
       </div>
   </Fragment>
 );
+
+Desk.propTypes = {
+  updateLocation: PropTypes.func.isRequired
+};
 
 export default Desk;

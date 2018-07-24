@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const BossDesk = props => (
   <Fragment>
@@ -21,5 +22,10 @@ const BossDesk = props => (
       </div>
   </Fragment>
 );
+
+BossDesk.propTypes = {
+  hasCake: PropTypes.bool.isRequired,
+  updateLocation: PropTypes.func.isRequired
+};
 
 export default BossDesk;

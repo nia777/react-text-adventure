@@ -17,7 +17,6 @@ class Game extends Component {
       case 'Desk':
         return (
           <Desk 
-            location={this.state.location} 
             updateLocation={this.updateLocation}
           />
         );
@@ -25,15 +24,13 @@ class Game extends Component {
         return (
           <BossDesk 
             hasCake={this.state.hasCake}
-            location={this.state.location} 
             updateLocation={this.updateLocation} 
           />
         );
       case 'BreakRoom':
         return (
           <BreakRoom 
-            hasCake={this.state.hasCake}
-            location={this.state.location} 
+            hasCake={this.state.hasCake} 
             toggleCake={this.toggleCake}
             updateLocation={this.updateLocation} 
           />
@@ -47,7 +44,6 @@ class Game extends Component {
       default:
         return (
           <Start 
-            location={this.state.location} 
             updateLocation={this.updateLocation} 
           />
         );

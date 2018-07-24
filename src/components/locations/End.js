@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const End = props => (
   <Fragment>
@@ -9,5 +10,9 @@ const End = props => (
       <button onClick={props.restart}>Play again</button>
   </Fragment>
 );
+
+End.propTypes = {
+  restart: PropTypes.func.isRequired
+};
 
 export default End;

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const Start = props => (
   <Fragment>
@@ -13,5 +14,9 @@ const Start = props => (
       </div>
   </Fragment>
 );
+
+Start.propTypes = {
+  updateLocation: PropTypes.func.isRequired
+};
 
 export default Start;

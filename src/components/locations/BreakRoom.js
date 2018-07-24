@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const BreakRoom = props => (
   <Fragment>
@@ -17,5 +18,11 @@ const BreakRoom = props => (
       </div>
   </Fragment>
 );
+
+BreakRoom.propTypes = {
+  hasCake: PropTypes.bool.isRequired,
+  toggleCake: PropTypes.func.isRequired,
+  updateLocation: PropTypes.func.isRequired
+};
 
 export default BreakRoom;
