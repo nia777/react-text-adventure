@@ -1,5 +1,7 @@
 # react-text-adventure-game
 
+**Note this repo is archived and won't be receiving updates, so the code might not match current conventions. Keeping this around as a reminder of how far I've come.**
+
 ## Background
 Decided to rewrite an [older angular 1 project](https://github.com/deeheber/text-adventure-game) in react for fun.
 
